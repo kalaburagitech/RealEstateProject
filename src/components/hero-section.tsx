@@ -4,7 +4,7 @@ import { Search } from 'lucide-react'
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-cover bg-center h-[70vh] flex items-center" style={{backgroundImage: "url('/placeholder.svg?height=700&width=1200')"}}>
+    <section className="relative bg-cover bg-center h-[70vh] flex items-center" style={{backgroundImage: "url('https://avada.website/real-estate/wp-content/uploads/sites/176/2023/09/dream-houses.jpg')"}}>
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       <div className="container mx-auto px-4 relative z-10 text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Find Your Dream Home</h1>
