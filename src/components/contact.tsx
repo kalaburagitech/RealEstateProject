@@ -1,4 +1,4 @@
-'use client' 
+'use client';
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,7 +9,7 @@ export default function ContactPage() {
     email: '',
     message: '',
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionStatus, setSubmissionStatus] = useState<string | null>(null);
 
@@ -43,7 +43,8 @@ export default function ContactPage() {
       const data = await response.json();
       setSubmissionStatus(data.message); // Set the success message
       setFormData({ name: '', email: '', message: '' }); // Reset form
-    } catch (error) {
+    } catch (err) {
+      console.error(err); // Log the error (optional)
       setSubmissionStatus('Something went wrong. Please try again later.');
     } finally {
       setIsSubmitting(false);
@@ -54,7 +55,7 @@ export default function ContactPage() {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Contact Us</h2>
-        <p className="text-xl text-center mb-8">We'd love to hear from you! Please fill out the form below.</p>
+        <p className="text-xl text-center mb-8">We&#39;d love to hear from you! Please fill out the form below.</p>
 
         {submissionStatus && (
           <div className={`text-center mb-8 ${submissionStatus.includes('error') ? 'text-red-600' : 'text-green-600'}`}>
