@@ -7,9 +7,6 @@ import Header from "@/components/header";
 import HeroSection from "@/components/hero-section";
 import ImageGallery from "@/components/image-gallery";
 
-
-
-
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
